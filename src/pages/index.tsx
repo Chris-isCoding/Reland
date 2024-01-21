@@ -6,7 +6,7 @@ export default function Home() {
   const [data, setData] = useState("Hello");
 
   const handleClick = async () => {
-    await fetch("https://reland-server.onrender.com/")
+    await fetch("https://reland-server.onrender.com")
       .then((res) => res.json())
       .then((res: { message: string }) => setData(res.message))
       .catch((err) => console.log(err));
